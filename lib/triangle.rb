@@ -9,9 +9,12 @@ class Triangle
   end 
     
     def valid?
+      a = @side1
+      b = @side2
+      c = @side3
       if self.find {|side| side <= 0)
         false
-        elsif self.f
+        elsif a+b <= c || a+c <= b || b+c <= a
         false 
       else 
         true 
@@ -23,6 +26,7 @@ class Triangle
     end 
     
     def isoceles?
+      
     end 
     
     def scalene?
