@@ -13,7 +13,7 @@ class Triangle
       a = @side1
       b = @side2
       c = @side3
-      if @sides.any?
+      if @sides.any?{|side| side <=0}
         false
         elsif a+b <= c || a+c <= b || b+c <= a
         false 
