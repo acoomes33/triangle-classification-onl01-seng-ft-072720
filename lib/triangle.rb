@@ -7,21 +7,6 @@ class Triangle
     @side2 = side2
     @side3 = side3
   end 
-  
-  def kind 
-    if !valid?
-       begin
-        raise TriangleError
-      rescue TriangleError => error
-          puts error.message
-      end
-    elsif @side1 == @side2 && @side1 == @side3
-      :equilateral
-      # elsif @side1 == @side2 || @side1 == @side3 || 
-      # :isoceles
-      # elsif @side1 != @side2 != @side3
-      # :scalene
-    end
     
     def valid?
       if self.find {|num| num <= 0)
@@ -33,12 +18,29 @@ class Triangle
       end 
     end 
     
-  end 
+    def equilateral
+      @side1 == @side2 && @side1 == @side3
+    end 
   
+  def kind 
+    if !valid?
+       begin
+        raise TriangleError
+      rescue TriangleError => error
+          puts error.message
+      end
+    elsif equilateral?
+      :equilateral
+      # elsif isoceles? 
+      # :isoceles
+      # elsif @side1 != @side2 != @side3
+      # :scalene
+    end
+  end 
   
   class TriangleError < StandardError
     def message 
-      "ERROR"
+      "ERROR: Not a valid triangle, please try again."
     end
   end
   
