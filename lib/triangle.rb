@@ -23,15 +23,15 @@ class Triangle
     end 
     
     def equilateral?
-      self.sides.uniq.count == 1
+      @sides.uniq.count == 1
     end 
     
     def isoceles?
-      self.sides.uniq.count == 2
+      @sides.uniq.count == 2
     end 
     
     def scalene?
-      self.sides.uniq.count == 3
+      @sides.uniq.count == 3
     end 
   
   def kind 
