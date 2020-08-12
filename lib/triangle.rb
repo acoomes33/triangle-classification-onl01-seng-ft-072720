@@ -9,7 +9,7 @@ class Triangle
   end 
   
   def kind 
-    if !((@side1 +@side2) > @side3)
+    if !valid?
        begin
         raise TriangleError
       rescue TriangleError => error
@@ -22,6 +22,11 @@ class Triangle
       # elsif @side1 != @side2 != @side3
       # :scalene
     end
+    
+    def valid?
+      if self.find {|num| num <= 0)
+        false
+    end 
     
   end 
   
