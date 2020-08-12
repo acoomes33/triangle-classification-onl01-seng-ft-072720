@@ -26,6 +26,11 @@ class Triangle
     def valid?
       if self.find {|num| num <= 0)
         false
+        elsif #inequality
+        false 
+      else 
+        true 
+      end 
     end 
     
   end 
