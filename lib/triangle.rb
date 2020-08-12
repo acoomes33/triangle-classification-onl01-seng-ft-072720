@@ -9,17 +9,23 @@ class Triangle
   end 
     
     def valid?
-      if self.find {|num| num <= 0)
+      if self.find {|side| side <= 0)
         false
-        elsif #inequality
+        elsif self.f
         false 
       else 
         true 
       end 
     end 
     
-    def equilateral
+    def equilateral?
       @side1 == @side2 && @side1 == @side3
+    end 
+    
+    def isoceles?
+    end 
+    
+    def scalene?
     end 
   
   def kind 
@@ -31,10 +37,10 @@ class Triangle
       end
     elsif equilateral?
       :equilateral
-      # elsif isoceles? 
-      # :isoceles
-      # elsif @side1 != @side2 != @side3
-      # :scalene
+    elsif isoceles? 
+       :isoceles
+    elsif scalene?
+       :scalene
     end
   end 
   
