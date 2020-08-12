@@ -17,10 +17,10 @@ class Triangle
       end
     elsif @side1 == @side2 == @side3
       :equilateral
-      elsif @side1 == @side2 || @side == @side3
-      :isoceles
-      elsif @side1 != @side2 != @side3
-      :scalene
+      # elsif @side1 == @side2 || @side == @side3
+      # :isoceles
+      # elsif @side1 != @side2 != @side3
+      # :scalene
     end
     
   end 
