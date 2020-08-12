@@ -6,6 +6,7 @@ class Triangle
     @side1 = side1
     @side2 = side2
     @side3 = side3
+    @sides = [side1, side2, side3]
   end 
     
     def valid?
@@ -22,14 +23,15 @@ class Triangle
     end 
     
     def equilateral?
-      @side1 == @side2 && @side1 == @side3
+      self.sides.uniq.count == 1
     end 
     
     def isoceles?
-      
+      self.sides.uniq.count == 2
     end 
     
     def scalene?
+      self.sides.uniq.count == 3
     end 
   
   def kind 
