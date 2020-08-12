@@ -40,7 +40,7 @@ class Triangle
     elsif equilateral?
       :equilateral
     elsif isoceles? 
-       :isoceles
+       :isosceles
     elsif scalene?
        :scalene
     end
